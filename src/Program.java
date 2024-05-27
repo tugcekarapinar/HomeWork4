@@ -1,30 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         List<Person> personList = new ArrayList<>();
 
-        System.out.println("=======Yeni Personel Ekleme Programı=======");
+        Person person1 = new Person("Tuğçe","Karapinar",30,100);
+        Person person2 = new Person("Tugay","Karapinar",31,100);
+        Person person3 = new Person("Demir Ege","Karapinar",0,100);
+        Person person4 = new Person("Ali","Veli",30,100);
 
-        while (true){
-            System.out.print("Lütfen Yeni Personelin Adını Girin:");
-            String name = scanner.nextLine();
+        personList.add(person1);
+        personList.add(person2);
+        personList.add(person3);
+        personList.add(person4);
 
-            System.out.print("Lütfen Yeni Personelin Soy Adını Girin:");
-            String surname = scanner.nextLine();
-
-            System.out.print("Lütfen Yeni Personelin Yaşını Girin:");
-            int age = scanner.nextInt();
-
-            System.out.print("Lütfen Yeni Personelin Maaşını Girin:");
-            double salery = scanner.nextDouble();
-
-            Person person = new Person(name,surname,age,salery);
-            personList.add(person);
-            person.WriteInfo();
+        for (int i = 0; i < personList.size(); i++) {
+            personList.get(i).WriteInfo();
         }
     }
 }

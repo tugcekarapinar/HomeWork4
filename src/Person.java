@@ -12,6 +12,6 @@ public class Person {
     }
 
     public void WriteInfo(){
-        System.out.println("Adı:" + name + " " + "Soyadı:" + surname + " " + "Yaşı:"+age + " " + "Maaşı:"+salary);
+        System.out.println("Adı:" + name + " " + "Soyadı:" + surname + " " + "Yaşı:" + age + " " + "Maaşı:"+salary);
     }
 }
